@@ -1,6 +1,6 @@
 import * as React from 'react';
-import Link from 'next/link';
-import HomeIcon from '@mui/icons-material/Home';
+//import Link from 'next/link';
+//import HomeIcon from '@mui/icons-material/Home';
 import ThemeRegistry from '@/components/ThemeRegistry/ThemeRegistry';
 
 export const metadata = {
@@ -8,9 +8,9 @@ export const metadata = {
   description: 'Personal website for software developer Daniel Swann',
 };
 
-const LINKS = [
+/*const LINKS = [
   { text: 'Home', href: '/', icon: HomeIcon },
-];
+];*/
 
 export default function RootLayout({ children }: { children: React.ReactNode }) {
   return (
