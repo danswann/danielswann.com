@@ -1,0 +1,20 @@
+name: 'SST Deployment'
+description: 'Runs `sst build` and `sst deploy`'
+branding:
+  icon: 'upload-cloud'
+  color: 'orange'
+
+inputs:
+  stage:
+    description: 'SST `stage` to build and deploy'
+    required: true
+
+runs:
+  using: 'composite'
+  steps:
+    - name: Build the SST app
+      run: npx sst build --stage ${{ inputs.stage }}
+      shell: bash
+    - name: Deploy the SST app
+      run: npx sst deploy --stage ${{ inputs.stage }} --from ./.sst/dist
+      shell: bash
