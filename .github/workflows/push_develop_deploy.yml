@@ -1,0 +1,33 @@
+name: Deploy to development AWS account
+
+on:
+  push:
+    branches: [develop]
+
+permissions:
+  contents: read
+  id-token: write
+
+concurrency: deploy-dev
+
+jobs:
+  deploy:
+    name: Deploy to development AWS account
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v3
+      - uses: actions/setup-node@v3
+        with:
+          node-version: ${{ vars.NODE_VERSION_STRING }}
+      - name: Install dependencies
+        run: |
+          npm ci
+          npm ci --prefix 'packages/web'
+      - uses: aws-actions/configure-aws-credentials@v2
+        with:
+          role-to-assume: ${{ secrets.DEV_DEPLOY_ROLE_ARN }}
+          aws-region: ${{ vars.AWS_REGION }}
+      - uses: ./.github/actions/sst-deploy
+        name: Build and deploy SST app
+        with:
+          stage: dev
