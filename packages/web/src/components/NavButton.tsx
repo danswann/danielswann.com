@@ -2,7 +2,7 @@
 import Button from '@mui/material/Button';
 import Link from '@mui/material/Link'
 import { usePathname } from 'next/navigation';
-import * as React from "react"
+import * as React from 'react';
 
 
 export type NavButtonProps = {
@@ -24,7 +24,7 @@ export default function NavButton({ text, icon, href}: NavButtonProps) {
                     //border: isActive ? '1px solid white' : 'none'
                     textDecoration: isActive ? 'underline' : 'none',
                     textUnderlineOffset: '7px',
-                    ":hover": {
+                    ':hover': {
                         textDecoration: 'underline'
                     }
                 }}
