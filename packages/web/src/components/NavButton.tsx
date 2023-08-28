@@ -12,25 +12,25 @@ export type NavButtonProps = {
 }
 
 export default function NavButton({ text, icon, href}: NavButtonProps) {
-    const pathname = usePathname();
-    const isActive = href === pathname;
-    console.log(isActive);
-    return (
-        <Link href={href} sx={{ color:'inherit' }}>
-            <Button size='large' startIcon={icon}
-                sx={{
-                    color:'inherit',
-                    margin:'0 20px',
-                    //border: isActive ? '1px solid white' : 'none'
-                    textDecoration: isActive ? 'underline' : 'none',
-                    textUnderlineOffset: '7px',
-                    ':hover': {
-                        textDecoration: 'underline'
-                    }
-                }}
-            >
-                {text}
-            </Button>
-        </Link>
-    );
+  const pathname = usePathname();
+  const isActive = href === pathname;
+  console.log(isActive);
+  return (
+    <Link href={href} sx={{ color:'inherit' }}>
+      <Button size='large' startIcon={icon}
+        sx={{
+          color:'inherit',
+          margin:'0 20px',
+          //border: isActive ? '1px solid white' : 'none'
+          textDecoration: isActive ? 'underline' : 'none',
+          textUnderlineOffset: '7px',
+          ':hover': {
+            textDecoration: 'underline'
+          }
+        }}
+      >
+        {text}
+      </Button>
+    </Link>
+  );
 }
