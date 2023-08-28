@@ -14,7 +14,6 @@ export type NavButtonProps = {
 export default function NavButton({ text, icon, href}: NavButtonProps) {
   const pathname = usePathname();
   const isActive = href === pathname;
-  console.log(isActive);
   return (
     <Link href={href} sx={{ color:'inherit' }}>
       <Button size='large' startIcon={icon}
