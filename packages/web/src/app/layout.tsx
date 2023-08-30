@@ -21,10 +21,10 @@ export default function RootLayout({ children }: { children: React.ReactNode }) 
     <html lang='en' style={{ overflowY:'scroll' }}>
       <body>
         <ThemeRegistry>
-          <AppBar position='sticky'>
+          <AppBar component='nav'>
             <Container maxWidth='xl'>
               <Toolbar>
-                <Typography variant='h5' noWrap>
+                <Typography variant='h4'>
                   Daniel Swann
                 </Typography>
                 <Container maxWidth='md'>
@@ -37,7 +37,7 @@ export default function RootLayout({ children }: { children: React.ReactNode }) 
               </Toolbar>
             </Container>
           </AppBar>
-          <Container maxWidth='xl'>
+          <Container component="main" maxWidth='xl' sx={{ p:10 }}>
             {children}
           </Container>
         </ThemeRegistry>
