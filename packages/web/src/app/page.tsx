@@ -21,8 +21,8 @@ import AboutMe from '@/content/markdown/about.mdx';
 
 const aboutMdxComponents: MDXComponents = {
   h1: ({ children }) => <Typography variant='h4' variantMapping={{ h4:'h1' }}>{children}</Typography>,
-  //h2: ({ children }) => <Typography variant='h5' variantMapping={{ h5:'h2' }}>{children}</Typography>,
-  //h3: ({ children }) => <Typography variant='h6' variantMapping={{ h6:'h3' }}>{children}</Typography>,
+  h2: ({ children }) => <Typography variant='h5' variantMapping={{ h5:'h2' }}>{children}</Typography>,
+  h3: ({ children }) => <Typography variant='h6' variantMapping={{ h6:'h3' }}>{children}</Typography>,
   p: ({ children }) => <Typography /*marginBottom='1rem'*/ variant='body1' >{children}</Typography>
 }
 
@@ -42,7 +42,7 @@ export default function HomePage() {
         </CardContent>
       </Box>
       <Divider />
-      <CardActions sx={{ display:'flex', justifyContent:'center', columnGap:'2rem' }}>
+      <CardActions sx={{ display:'flex', justifyContent:'center', columnGap:smallScreen ? 0 : '2rem', flexWrap:'wrap' }}>
         <LinkButton href='https://github.com/danswann' icon={<GitHub />} text='GitHub' />
         <LinkButton href='https://www.linkedin.com/in/daniel-swann/' icon={<LinkedIn />} text='LinkedIn' />
         <LinkButton href='mailto:hello@danielswann.com' icon={<Email />} text='Email' />

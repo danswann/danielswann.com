@@ -19,10 +19,10 @@ export const metadata = {
 
 export default function RootLayout({ children }: { children: React.ReactNode }) {
   return (
-    <html lang='en' style={{ overflowY:'scroll' }}>
+    <html lang='en'>
       <body>
         <ThemeRegistry>
-          <AppBar component='nav'>
+          <AppBar component='nav' sx={{ paddingLeft:'calc(100vw - 100%)' }}>
             <Container maxWidth='xl'>
               <Toolbar>
                 <Typography variant='h4'>
@@ -38,9 +38,11 @@ export default function RootLayout({ children }: { children: React.ReactNode }) 
               </Toolbar>
             </Container>
           </AppBar>
-          <Container component="main" maxWidth='xl' sx={{ p:10 }}>
-            {children}
-          </Container>
+          <Box sx={{ paddingLeft:'calc(100vw - 100%)' }}>
+            <Container component="main" maxWidth='xl' sx={{ p:10 }}>
+              {children}
+            </Container>
+          </Box>
         </ThemeRegistry>
       </body>
     </html>
