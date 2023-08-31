@@ -6,9 +6,9 @@ import Box from '@mui/material/Box';
 
 
 const projectMdxComponents: MDXComponents = {
-  h1: ({ children }) => <Typography variant='h4' variantMapping={{ h4:'h2' }}>{children}</Typography>,
-  h2: ({ children }) => <Typography variant='h5' variantMapping={{ h5:'h3' }}>{children}</Typography>,
-  h3: ({ children }) => <Typography variant='h6' variantMapping={{ h6:'h4' }}>{children}</Typography>,
+  h1: ({ children }) => <Typography variant='h4' variantMapping={{ h4:'h1' }}>{children}</Typography>,
+  h2: ({ children }) => <Typography variant='h5' variantMapping={{ h5:'h2' }}>{children}</Typography>,
+  h3: ({ children }) => <Typography variant='h6' variantMapping={{ h6:'h3' }}>{children}</Typography>,
   p: ({ children }) => <Typography variant='body1'>{children}</Typography>
 }
 
