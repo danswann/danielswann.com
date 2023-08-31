@@ -30,7 +30,7 @@ export default function ProjectCard(props: ProjectCardProps) {
     <Card sx={{ padding:'1rem 2rem 0.5rem 2rem' }}>
       <Box  sx={{ display:'flex', flexDirection:smallScreen ? 'column' : 'row', justifyContent:'flex-start', marginBottom:'1rem' }}>
         <CardMedia sx={{ flex:1, minWidth:100, minHeight:100, maxWidth:400, maxHeight:400, alignSelf:'center' }}>
-          <Image style={{ height:'auto', width:'100%' }} src={props.imgSrc} alt={`Image of ${props.title} project`} priority />
+          <Image width={400} style={{ height:'auto', width:'100%' }} src={props.imgSrc} alt={`Image of ${props.title} project`} priority />
         </CardMedia>
         <CardContent sx={{ flex:3, margin:smallScreen ? 0 : '0 0.5rem' }}>
           {props.blurb}
