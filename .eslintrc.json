@@ -16,10 +16,29 @@
         "@typescript-eslint",
         "eslint-plugin-import"
     ],
+    //"ignorePatterns": ["packages/web/*"],
     "rules": {
         "indent": ["warn", 2],
         "quotes": ["warn", "single", {"avoidEscape": true, "allowTemplateLiterals": true}],
 
-        "import/newline-after-import": ["warn", {"count": 2}]
+        "import/newline-after-import": ["warn", {"count": 2}],
+        "import/order": [
+            "warn",
+            {
+                "groups": [
+                    "builtin",
+                    "external",
+                    "internal",
+                    "index",
+                    "parent",
+                    "sibling"
+                ],
+                "newlines-between": "always",
+                "alphabetize": {
+                    "order": "asc",
+                    "orderImportKind": "asc"
+                }
+            }
+        ]
     }
 }

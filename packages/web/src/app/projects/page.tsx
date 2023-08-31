@@ -1,8 +1,11 @@
-import ProjectCard from '@/components/ProjectCard';
-import { MDXComponents } from 'mdx/types';
-import projects from './projects';
-import Typography from '@mui/material/Typography';
 import Box from '@mui/material/Box';
+import Typography from '@mui/material/Typography';
+import { MDXComponents } from 'mdx/types';
+
+import projects from './projects';
+
+import ProjectCard from '@/components/ProjectCard';
+
 
 
 const projectMdxComponents: MDXComponents = {

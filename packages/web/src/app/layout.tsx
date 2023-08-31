@@ -1,5 +1,3 @@
-import NavButton from '@/components/NavButton';
-import ThemeRegistry from '@/components/ThemeRegistry/ThemeRegistry';
 import FolderIcon from '@mui/icons-material/Folder';
 import PersonIcon from '@mui/icons-material/Person';
 import AppBar from '@mui/material/AppBar';
@@ -9,6 +7,9 @@ import Divider from '@mui/material/Divider';
 import Toolbar from '@mui/material/Toolbar';
 import Typography from '@mui/material/Typography';
 import * as React from 'react';
+
+import NavButton from '@/components/NavButton';
+import ThemeRegistry from '@/components/ThemeRegistry/ThemeRegistry';
 
 
 export const metadata = {

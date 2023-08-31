@@ -1,5 +1,5 @@
-import { HostedZone } from 'aws-cdk-lib/aws-route53';
 import { RetentionDays } from 'aws-cdk-lib/aws-logs';
+import { HostedZone } from 'aws-cdk-lib/aws-route53';
 import { StackContext, NextjsSite } from 'sst/constructs';
 
 
