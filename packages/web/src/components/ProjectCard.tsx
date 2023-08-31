@@ -29,7 +29,7 @@ export default function ProjectCard(props: ProjectCardProps) {
   return(
     <Card sx={{ padding:'1rem 2rem 0.5rem 2rem', marginBottom:'0rem' }}>
       <Box  sx={{ display:'flex', flexDirection:smallScreen ? 'column' : 'row', justifyContent:'flex-start', marginBottom:'1rem' }}>
-        <CardMedia sx={{ flex:1, minWidth:100, minHeight:100, maxWidth:400, maxHeight:400 }}>
+        <CardMedia sx={{ flex:1, minWidth:100, minHeight:100, maxWidth:400, maxHeight:400, alignSelf:'center' }}>
           <Image style={{ height:'auto', width:'100%' }} src={props.imgSrc} alt={`Image of ${props.title} project`} />
         </CardMedia>
         <CardContent sx={{ flex:3, margin:smallScreen ? 0 : '0 0.5rem' }}>
@@ -50,7 +50,7 @@ export default function ProjectCard(props: ProjectCardProps) {
         props.sourceUrl ?
           <>
             <Divider />
-            <CardActions>
+            <CardActions sx={{ display:'flex', justifyContent:'flex-end' }}>
               <Link target='_blank' rel='noopener' href={props.sourceUrl}>
                 <Button startIcon={<GitHub />}>View Source</Button>
               </Link>

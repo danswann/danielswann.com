@@ -1,4 +1,4 @@
-import { AmazonwebservicesPlainWordmarkIcon, BootstrapOriginalIcon, Css3PlainWordmarkIcon, ExpressOriginalIcon, Html5PlainWordmarkIcon, JavascriptPlainIcon, JqueryPlainWordmarkIcon, NodejsOriginalIcon, ReactOriginalWordmarkIcon } from 'react-devicons';
+import { AmazonwebservicesPlainWordmarkIcon, BootstrapOriginalIcon, Css3PlainWordmarkIcon, DockerPlainWordmarkIcon, ExpressOriginalIcon, Html5PlainWordmarkIcon, JavascriptPlainIcon, JqueryPlainWordmarkIcon, MongodbPlainWordmarkIcon, NodejsOriginalIcon, ReactOriginalWordmarkIcon } from 'react-devicons';
 
 import SoundlinkImage from '@/content/images/projects/soundlink.png';
 import SoundlinkMarkdown from '@/content/markdown/projects/soundlink.mdx';
@@ -19,7 +19,10 @@ const projects = [
       BootstrapOriginalIcon,
       JqueryPlainWordmarkIcon,
       ExpressOriginalIcon,
-      AmazonwebservicesPlainWordmarkIcon
+      NodejsOriginalIcon,
+      MongodbPlainWordmarkIcon,
+      AmazonwebservicesPlainWordmarkIcon,
+      DockerPlainWordmarkIcon
     ]
   },
   {
