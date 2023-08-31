@@ -7,6 +7,7 @@ import CardActions from '@mui/material/CardActions';
 import CardContent from '@mui/material/CardContent';
 import CardMedia from '@mui/material/CardMedia';
 import Divider from '@mui/material/Divider';
+import Link from '@mui/material/Link';
 import { useTheme } from '@mui/material/styles';
 import useMediaQuery from '@mui/material/useMediaQuery';
 import Image, { StaticImageData } from 'next/image';
@@ -16,49 +17,47 @@ import * as React from 'react';
 export type ProjectCardProps = {
   title: string,
   imgSrc: StaticImageData,
-  blurb: React.ReactNode
+  blurb: React.ReactNode,
+  tech?: React.ReactNode
+  sourceUrl?: string
 }
-
-/*export default function ProjectCard(props: ProjectCardProps) {
-  return(
-    <Card sx={{ display:'flex', flexDirection:'row', justifyContent:'flex-start'}}>
-      <CardActionArea sx={{ display:'flex', flexDirection:'row', justifyContent:'flex-start', cursor:'default' }}>
-        <CardMedia sx={{ flex:'1' }}>
-          <Image style={{ height:'auto', width:'100%' }} src={props.imgSrc} alt='Placeholder' />
-        </CardMedia>
-        <Box sx={{ flex:'3', alignSelf:'flex-start', display:'flex', flexDirection:'column', justifyContent:'flex-start' }}>
-          <CardContent>
-            {props.blurb}
-          </CardContent>
-        </Box>
-      </CardActionArea>
-    </Card>
-  )
-}*/
 
 export default function ProjectCard(props: ProjectCardProps) {
   const theme = useTheme();
   const smallScreen = useMediaQuery(theme.breakpoints.down('md'));
 
   return(
-    <Card>
-      <Box  sx={{ display:'flex', flexDirection:smallScreen ? 'column' : 'row', justifyContent:'flex-start' }}>
+    <Card sx={{ padding:'1rem 2rem 0.5rem 2rem', marginBottom:'0rem' }}>
+      <Box  sx={{ display:'flex', flexDirection:smallScreen ? 'column' : 'row', justifyContent:'flex-start', marginBottom:'1rem' }}>
         <CardMedia sx={{ flex:1, minWidth:100, minHeight:100, maxWidth:400, maxHeight:400 }}>
           <Image style={{ height:'auto', width:'100%' }} src={props.imgSrc} alt={`Image of ${props.title} project`} />
         </CardMedia>
-        <CardContent sx={{ flex:3, marginRight:5 }}>
+        <CardContent sx={{ flex:3, margin:smallScreen ? 0 : '0 0.5rem' }}>
           {props.blurb}
         </CardContent>
       </Box>
-      <Divider variant='middle' />
-      <CardContent sx={{ display:'flex', flexWrap:'wrap', justifyContent:'center' }}>
-        Hello
-      </CardContent>
-      <Divider variant='middle' />
-      <CardActions>
-        <Button startIcon={<GitHub />}>View Source</Button>
-      </CardActions>
-
+      {
+        props.tech ? 
+          <>
+            <Divider />
+            <CardContent sx={{ display:'flex', flexWrap:'wrap', justifyContent:'center', gap:'4rem' }}>
+              {props.tech}
+            </CardContent>
+          </>
+          : null
+      }
+      {
+        props.sourceUrl ?
+          <>
+            <Divider />
+            <CardActions>
+              <Link target='_blank' rel='noopener' href={props.sourceUrl}>
+                <Button startIcon={<GitHub />}>View Source</Button>
+              </Link>
+            </CardActions>
+          </>
+          : null
+      }
     </Card>
   )
 }
