@@ -20,11 +20,11 @@ export default function ProjectPage() {
   return(
     <>
       {
-        projects.map(p => {
+        projects.map((p, i) => {
           const techIcons = p.tech?.length > 0 ? <>{p.tech.map(I => <I style={{ fill:'white' }} size='3rem' />)}</>: null;
           return (
             <Box sx={{ paddingBottom:'4rem' }}>
-              <ProjectCard title={p.title} imgSrc={p.imgSrc} blurb={<p.mdBlurb components={projectMdxComponents} />} tech={techIcons} sourceUrl={p.sourceUrl} />
+              <ProjectCard key={p.title} title={p.title} imgSrc={p.imgSrc} blurb={<p.mdBlurb components={projectMdxComponents} />} tech={techIcons} sourceUrl={p.sourceUrl} order={i} />
             </Box>
           )
         })
