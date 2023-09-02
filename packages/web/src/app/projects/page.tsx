@@ -21,7 +21,7 @@ export default function ProjectPage() {
     <>
       {
         projects.map((p, i) => {
-          const techIcons = p.tech?.length > 0 ? <>{p.tech.map(I => <I style={{ fill:'white' }} size='3rem' />)}</>: null;
+          const techIcons = p.tech?.length > 0 ? <>{p.tech.map(I => <I key={I.displayName} style={{ fill:'white' }} size='3rem' />)}</>: null;
           return (
             <Box sx={{ paddingBottom:'4rem' }}>
               <ProjectCard key={p.title} title={p.title} imgSrc={p.imgSrc} blurb={<p.mdBlurb components={projectMdxComponents} />} tech={techIcons} sourceUrl={p.sourceUrl} order={i} />
