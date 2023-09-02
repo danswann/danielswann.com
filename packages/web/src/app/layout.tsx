@@ -24,12 +24,12 @@ export default function RootLayout({ children }: { children: React.ReactNode }) 
         <ThemeRegistry>
           <AppBar component='nav' sx={{ paddingLeft:'calc(100vw - 100%)' }}>
             <Container maxWidth='xl'>
-              <Toolbar>
+              <Toolbar disableGutters>
                 <Typography variant='h4'>
                   Daniel Swann
                 </Typography>
-                <Container maxWidth='md'>
-                  <Box sx={{display:'flex'}}>
+                <Container maxWidth='md' disableGutters>
+                  <Box sx={{ display:'flex', flexWrap:'wrap' }}>
                     <NavButton text='About' href='/' icon={<PersonIcon />} />
                     <Divider orientation='vertical' variant='middle' flexItem />
                     <NavButton text='Projects' href='/projects' icon={<FolderIcon />} />
@@ -39,7 +39,7 @@ export default function RootLayout({ children }: { children: React.ReactNode }) 
             </Container>
           </AppBar>
           <Box sx={{ paddingLeft:'calc(100vw - 100%)' }}>
-            <Container component="main" maxWidth='xl' sx={{ p:10 }}>
+            <Container component="main" maxWidth='xl' sx={{ paddingTop:'80px' }}>
               {children}
             </Container>
           </Box>

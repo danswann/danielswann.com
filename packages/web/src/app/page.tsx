@@ -32,7 +32,7 @@ export default function HomePage() {
 
   
   return (
-    <Card sx={{ padding:'1rem 2rem 0.5rem 2rem' }}>
+    <Card sx={{ padding:'1rem 2rem 0.5rem 2rem', marginBottom:'1rem' }}>
       <Box  sx={{ display:'flex', flexDirection:smallScreen ? 'column' : 'row', marginBottom:'1rem' }}>
         <CardMedia sx={{ flex:1, minWidth:100, minHeight:100, maxWidth:300, maxHeight:300, alignSelf:'center' }}>
           <Image priority width={300} style={{ height:'auto', width:'100%', border:'0.5rem solid DarkKhaki' }} src={Grouch} alt='Oscar the Grouch' />
