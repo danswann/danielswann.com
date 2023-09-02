@@ -1,4 +1,8 @@
+/* eslint-disable @typescript-eslint/no-var-requires */
 /** @type {import('next').NextConfig} */
+const withMDX = require('@next/mdx')();
+
+
 const nextConfig = {
   reactStrictMode: true,
   swcMinify: true,
@@ -8,5 +12,4 @@ const nextConfig = {
     },
   }
 };
-
-module.exports = nextConfig;
+module.exports = withMDX(nextConfig);

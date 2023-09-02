@@ -1,4 +1,5 @@
 name: Deploy to production AWS account
+run-name: Deploy ${{ github.event.after }} to production environment
 
 on:
   push:

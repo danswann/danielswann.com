@@ -1,5 +1,9 @@
 {
   "search.exclude": {
     "**/.sst": true
+  },
+  "editor.tabSize": 2,
+  "editor.codeActionOnSave": {
+    "source.organizeImports": true
   }
 }
