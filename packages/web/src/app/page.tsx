@@ -13,8 +13,8 @@ import { useTheme } from '@mui/material/styles';
 import { MDXComponents } from 'mdx/types';
 import Image from 'next/image';
 
+import Grouch from '@/../public/images/grouch.jpg';
 import LinkButton from '@/components/LinkButton';
-import Grouch from '@/content/images/grouch.jpg';
 import AboutMe from '@/content/markdown/about.mdx';
 
 

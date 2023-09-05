@@ -4,8 +4,8 @@ import {
   NodejsOriginalIcon, ReactOriginalWordmarkIcon
 } from 'react-devicons';
 
-import SoundlinkImage from '@/content/images/projects/soundlink.png';
-import TrgImage from '@/content/images/projects/trg.png';
+import SoundlinkImage from '@/../public/images/projects/soundlink.png';
+import TrgImage from '@/../public/images/projects/trg.png';
 import SoundlinkMarkdown from '@/content/markdown/projects/soundlink.mdx';
 import TrgMarkdown from '@/content/markdown/projects/trg.mdx';
 
