@@ -24,10 +24,11 @@ jobs:
         run: |
           npm ci
           npm ci --prefix 'packages/web'
-      - uses: aws-actions/configure-aws-credentials@v2
+      - uses: aws-actions/configure-aws-credentials@v3
         with:
           role-to-assume: ${{ secrets.PROD_DEPLOY_ROLE_ARN }}
           aws-region: ${{ vars.AWS_REGION }}
+          mask-aws-account-id: true
       - uses: ./.github/actions/sst-deploy
         name: Build and deploy SST app
         with:
