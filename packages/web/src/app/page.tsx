@@ -10,7 +10,6 @@ import CardMedia from '@mui/material/CardMedia';
 import Divider from '@mui/material/Divider';
 import Typography from '@mui/material/Typography';
 import { useTheme } from '@mui/material/styles';
-import useMediaQuery from '@mui/material/useMediaQuery';
 import { MDXComponents } from 'mdx/types';
 import Image from 'next/image';
 
@@ -28,21 +27,19 @@ const aboutMdxComponents: MDXComponents = {
 
 export default function HomePage() {
   const theme = useTheme();
-  const smallScreen = useMediaQuery(theme.breakpoints.down('md'));
 
-  
   return (
     <Card sx={{ padding:'1rem 2rem 0.5rem 2rem', marginBottom:'1rem' }}>
-      <Box  sx={{ display:'flex', flexDirection:smallScreen ? 'column' : 'row', marginBottom:'1rem' }}>
+      <Box  sx={{ display:'flex', flexDirection:'row', marginBottom:'1rem', [theme.breakpoints.down('md')]:{flexDirection:'column'} }}>
         <CardMedia sx={{ flex:1, minWidth:100, minHeight:100, maxWidth:300, maxHeight:300, alignSelf:'center' }}>
           <Image priority width={300} style={{ height:'auto', width:'100%', border:'0.5rem solid DarkKhaki' }} src={Grouch} alt='Oscar the Grouch' />
         </CardMedia>
-        <CardContent sx={{ flex:2, margin:smallScreen ? 0 : '0 0.5rem' }}>
+        <CardContent sx={{ flex:2, margin:'0 0.5rem', [theme.breakpoints.down('md')]:{margin:0} }}>
           <AboutMe components={aboutMdxComponents} />
         </CardContent>
       </Box>
       <Divider />
-      <CardActions sx={{ display:'flex', justifyContent:'center', columnGap:smallScreen ? 0 : '2rem', flexWrap:'wrap' }}>
+      <CardActions sx={{ display:'flex', justifyContent:'center', columnGap:'2rem', flexWrap:'wrap', [theme.breakpoints.down('md')]:{columnGap:0} }}>
         <LinkButton href='https://github.com/danswann' icon={<GitHub />} text='GitHub' />
         <LinkButton href='https://www.linkedin.com/in/daniel-swann/' icon={<LinkedIn />} text='LinkedIn' />
         <LinkButton href='mailto:hello@danielswann.com' icon={<Email />} text='Email' />
