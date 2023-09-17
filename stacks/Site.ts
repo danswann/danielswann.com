@@ -34,7 +34,7 @@ export function Site({ stack }: StackContext) {
       memorySize: '512 MB'
     },
     runtime: 'nodejs18.x',
-    warm: stack.stage === STAGE_PRODUCTION ? 5 : undefined,
+    warm: stack.stage === STAGE_PRODUCTION ? 20 : undefined,
 
     // General CDK settings forwarded to CDK construct
     cdk: {
