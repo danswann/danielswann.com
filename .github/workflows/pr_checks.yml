@@ -1,5 +1,5 @@
 name: Run PR checks
-run-name: "Type and linter checks for PR #${{ github.event.pull_request.number }}"
+run-name: "Checks for PR #${{ github.event.pull_request.number }}"
 
 on:
   pull_request:
@@ -7,6 +7,10 @@ on:
 
 permissions:
   contents: read
+
+concurrency:
+  group: checks-${{ github.event.pull_request.number }}
+  cancel-in-progress: true
 
 jobs:
   lint:
@@ -45,7 +49,7 @@ jobs:
         run: npm run typecheck
   buildall:
     if: github.actor != 'dependabot[bot]'
-    name: Verify stack build
+    name: Non-dependabot build check
     runs-on: ubuntu-latest
     permissions:
       id-token: write
@@ -67,7 +71,7 @@ jobs:
         run: npx sst build --stage dev
   buildsite:
     if: github.actor == 'dependabot[bot]'
-    name: Verify site build
+    name: Dependabot build check
     runs-on: ubuntu-latest
     steps:
       - uses: actions/checkout@v4

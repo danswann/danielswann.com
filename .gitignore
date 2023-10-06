@@ -4,6 +4,8 @@ node_modules
 # sst
 .sst
 .build
+sst-env.d.ts
+cdk.context.json
 
 # opennext
 .open-next
