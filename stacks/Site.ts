@@ -28,7 +28,6 @@ export function Site({ stack }: StackContext) {
     waitForInvalidation: process.env.CI == undefined ? true : false,
 
     // Nextjs Lambda function settings
-    timeout: '5 seconds',
     memorySize: '256 MB',
     imageOptimization: {
       memorySize: '512 MB'
