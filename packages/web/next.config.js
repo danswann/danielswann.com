@@ -10,7 +10,6 @@ const nextConfig = {
     '@mui/icons-material': {
       transform: '@mui/icons-material/{{member}}',
     },
-    output: 'export'
   }
 };
 module.exports = withMDX(nextConfig);
