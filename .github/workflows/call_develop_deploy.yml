@@ -1,9 +1,7 @@
 name: Deploy to development AWS account
-run-name: Deploy ${{ github.event.after }} to development environment
+run-name: Deploy develop branch to development environment
 
-on:
-  push:
-    branches: [develop]
+on: workflow_dispatch
 
 permissions:
   contents: read
@@ -17,6 +15,8 @@ jobs:
     runs-on: ubuntu-latest
     steps:
       - uses: actions/checkout@v4
+        with:
+          ref: develop
       - uses: actions/setup-node@v3
         with:
           node-version: ${{ vars.NODE_VERSION_STRING }}
