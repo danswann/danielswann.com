@@ -10,3 +10,20 @@ updates:
     schedule:
       interval: weekly
     target-branch: develop
+    groups:
+      nextjs:
+        patterns:
+          - 'next'
+          - '@next/*'
+          - '@mdx-js/*'
+          - '@types/mdx'
+          - 'sharp'
+      react:
+        patterns:
+          - 'react'
+          - 'react-dom'
+          - '@types/react*'
+      material-ui:
+        patterns:
+          - '@mui/*'
+          - '@emotion/*'
