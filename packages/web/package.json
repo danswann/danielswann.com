@@ -33,7 +33,7 @@
     "@types/react-dom": "18.x",
     "eslint": "latest",
     "eslint-config-next": "latest",
-    "sst": "2.27.0",
+    "sst": "2.26.11",
     "typescript": "latest"
   }
 }
