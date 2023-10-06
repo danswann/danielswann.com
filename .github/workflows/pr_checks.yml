@@ -13,7 +13,7 @@ jobs:
     name: Run linter
     runs-on: ubuntu-latest
     steps:
-      - uses: actions/checkout@v3
+      - uses: actions/checkout@v4
       - uses: actions/setup-node@v3
         with:
           node-version: ${{ vars.NODE_VERSION_STRING }}
@@ -30,7 +30,7 @@ jobs:
     name: Run typechecks
     runs-on: ubuntu-latest
     steps:
-      - uses: actions/checkout@v3
+      - uses: actions/checkout@v4
       - uses: actions/setup-node@v3
         with:
           node-version: ${{ vars.NODE_VERSION_STRING }}
