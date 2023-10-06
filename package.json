@@ -13,7 +13,7 @@
     "lint": "eslint . --ext .js --ext .ts --ignore-pattern 'node_modules/' --ignore-pattern '/packages/web/'"
   },
   "devDependencies": {
-    "@tsconfig/node18": "^18.2.1",
+    "@tsconfig/node18": "^18.2.2",
     "@typescript-eslint/eslint-plugin": "^6.7.4",
     "aws-cdk-lib": "2.95.1",
     "constructs": "10.2.69",
