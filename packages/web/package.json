@@ -19,7 +19,7 @@
     "@mdx-js/react": "^2.3.0",
     "@mui/icons-material": "latest",
     "@mui/material": "latest",
-    "@next/mdx": "^13.5.4",
+    "@next/mdx": "^13.5.5",
     "next": "13.x",
     "react": "18.x",
     "react-devicons": "latest",
