@@ -15,13 +15,13 @@
   "devDependencies": {
     "@tsconfig/node18": "^18.2.2",
     "@typescript-eslint/eslint-plugin": "^6.9.1",
-    "aws-cdk-lib": "2.95.1",
+    "aws-cdk-lib": "2.101.1",
     "eslint": "^8.52.0",
     "eslint-config-standard-with-typescript": "^39.1.1",
     "eslint-plugin-import": "^2.29.0",
     "eslint-plugin-n": "^16.2.0",
     "eslint-plugin-promise": "^6.1.1",
-    "sst": "2.29.2",
+    "sst": "2.32.2",
     "typescript": "^5.2.2"
   },
   "workspaces": []
