@@ -21,7 +21,7 @@
     "eslint-plugin-import": "^2.29.0",
     "eslint-plugin-n": "^16.2.0",
     "eslint-plugin-promise": "^6.1.1",
-    "sst": "2.29.2",
+    "sst": "2.32.2",
     "typescript": "^5.2.2"
   },
   "workspaces": []
