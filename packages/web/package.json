@@ -16,7 +16,7 @@
     "@emotion/react": "latest",
     "@emotion/styled": "latest",
     "@mdx-js/loader": "^2.3.0",
-    "@mdx-js/react": "^2.3.0",
+    "@mdx-js/react": "^3.0.0",
     "@mui/icons-material": "latest",
     "@mui/material": "latest",
     "@next/mdx": "^13.5.5",
