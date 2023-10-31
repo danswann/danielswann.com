@@ -8,32 +8,31 @@
     "build": "next build",
     "start": "next start",
     "lint": "next lint",
-    "post-update": "echo \"codesandbox preview only, need an update\" && yarn upgrade --latest",
     "typecheck": "tsc --noEmit"
   },
   "dependencies": {
-    "@emotion/cache": "latest",
-    "@emotion/react": "latest",
-    "@emotion/styled": "latest",
+    "@emotion/cache": "^11.11.0",
+    "@emotion/react": "^11.11.1",
+    "@emotion/styled": "^11.11.0",
     "@mdx-js/loader": "^2.3.0",
     "@mdx-js/react": "^2.3.0",
-    "@mui/icons-material": "latest",
-    "@mui/material": "latest",
+    "@mui/icons-material": "^5.14.12",
+    "@mui/material": "^5.14.12",
     "@next/mdx": "^13.5.4",
     "next": "13.x",
     "react": "18.x",
-    "react-devicons": "latest",
+    "react-devicons": "^2.14.0",
     "react-dom": "18.x",
     "sharp": "^0.32.6"
   },
   "devDependencies": {
     "@types/mdx": "^2.0.8",
-    "@types/node": "latest",
+    "@types/node": "^20.8.2",
     "@types/react": "18.x",
     "@types/react-dom": "18.x",
-    "eslint": "latest",
-    "eslint-config-next": "latest",
+    "eslint": "^8.50.0",
+    "eslint-config-next": "13.x",
     "sst": "2.28.0",
-    "typescript": "latest"
+    "typescript": "^5.2.2"
   }
 }
