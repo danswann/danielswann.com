@@ -23,7 +23,7 @@
     "react": "18.x",
     "react-devicons": "^2.14.0",
     "react-dom": "18.x",
-    "sharp": "^0.33.0"
+    "sharp": "^0.33.1"
   },
   "devDependencies": {
     "@types/mdx": "^2.0.10",
