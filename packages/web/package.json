@@ -18,7 +18,7 @@
     "@mdx-js/react": "^3.0.0",
     "@mui/icons-material": "^5.15.4",
     "@mui/material": "^5.15.4",
-    "@next/mdx": "^14.0.4",
+    "@next/mdx": "^14.1.0",
     "next": "14.x",
     "react": "18.x",
     "react-devicons": "^2.14.0",
@@ -26,7 +26,7 @@
     "sharp": "^0.33.2"
   },
   "devDependencies": {
-    "@types/mdx": "^2.0.10",
+    "@types/mdx": "^2.0.11",
     "@types/node": "^20.10.4",
     "@types/react": "18.x",
     "@types/react-dom": "18.x",
