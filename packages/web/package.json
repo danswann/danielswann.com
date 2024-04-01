@@ -21,7 +21,7 @@
     "@next/mdx": "^14.0.4",
     "next": "14.x",
     "react": "18.x",
-    "react-devicons": "^2.14.0",
+    "react-devicons": "^2.16.2",
     "react-dom": "18.x",
     "sharp": "^0.33.2"
   },
